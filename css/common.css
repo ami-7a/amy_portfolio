@@ -1,0 +1,321 @@
+@charset "UTF-8";
+/* SNSボタン色 */
+/* flex共通 */
+/* image共通 */
+/* ボタン共通 */
+/* ヘッダー、ハンバーガーメニュー、フッターの共通CSS */
+html {
+  width: 100vw;
+  height: auto;
+}
+
+body {
+  height: auto;
+  background-color: #fffcf2;
+  color: #534636;
+  font-size: 0.95rem;
+  font-family: "Cormorant Garamond", "Shippori Mincho B1", "Waterfall", serif;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0.12vw;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #534636;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  /* headerの分だけ下げる */
+  padding-top: 15vh;
+}
+@media (max-width: 480px) {
+  main {
+    padding-top: 9vh;
+  }
+}
+
+/* トップページとコンタクトページ */
+#main {
+  height: auto;
+  /* header＋#mainの分下げる */
+  padding-top: 23vh;
+}
+@media (max-width: 480px) {
+  #main {
+    padding-top: 15vh;
+  }
+}
+
+/* 全てのコンテントの上12vh下10vh開ける*/
+.main-content {
+  padding: 12vh 0vw 10vh;
+}
+@media (max-width: 480px) {
+  .main-content {
+    padding: 9vh 0vw;
+  }
+}
+
+/* 下からふっわっと表示 */
+.fade-up {
+  opacity: 0;
+  transform: translate(0, 45px);
+  transition: all 700ms;
+  transition-delay: 0.5s;
+}
+
+.effect-scroll {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/*** 下からふっわっと表示ここまで ***/
+.handwritting {
+  font-family: "Waterfall";
+  font-size: 3rem;
+}
+@media (max-width: 480px) {
+  .handwritting {
+    font-size: 2.5rem;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* 英語の小見出し */
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 1vh;
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* 日本語の小見出し */
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2vh;
+}
+
+.txt {
+  line-height: 5vh;
+}
+
+/* 縦文字*/
+.v-txt {
+  writing-mode: vertical-lr;
+  float: right;
+  padding-top: 20vh;
+  padding-right: 1vw;
+}
+@media (max-width: 480px) {
+  .v-txt {
+    padding-top: 5vh;
+    letter-spacing: 5px;
+  }
+}
+
+#header {
+  height: 13vh;
+  position: fixed;
+  background-color: #fffcf2;
+  width: 100%;
+  z-index: 100;
+}
+@media (max-width: 480px) {
+  #header {
+    height: 9vh;
+  }
+}
+#header .top-logo img {
+  width: 13vw;
+  height: 13vh;
+  object-fit: contain;
+  margin: 0.5vh auto;
+}
+@media (max-width: 480px) {
+  #header .top-logo img {
+    width: auto;
+    height: 7vh;
+    object-fit: contain;
+    margin: 1vh auto;
+  }
+}
+
+/* linkボタン共通 */
+.btn a {
+  margin: 2vh auto 5vh;
+  padding: 1.5vh 2vw;
+  max-width: 20vw;
+  background-color: #fffcf2;
+  transition: 0.3s;
+  box-shadow: 5px 5px 10px #c7c4b6;
+  line-height: 5vh;
+}
+@media (max-width: 480px) {
+  .btn a {
+    padding: 1.5vh 7vw;
+    max-width: 100vw;
+  }
+}
+.btn a:hover {
+  text-decoration: none;
+  background-color: #dfdbcc;
+  box-shadow: 5px 5px 10px #918e85;
+}
+.btn a .fa-chevron-right {
+  padding-left: 2vw;
+  color: #968b84;
+}
+
+/* CONTACT */
+.contact {
+  background-color: #e6dfd9;
+}
+.contact img {
+  width: 20vw;
+  height: 20vh;
+  object-fit: contain;
+  margin: 2vh auto;
+}
+@media (max-width: 480px) {
+  .contact img {
+    width: 40vw;
+    height: auto;
+    object-fit: contain;
+    margin: 1vh auto;
+  }
+}
+@media (max-width: 480px) {
+  .contact .txt {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+.contact .txt br:nth-child(1), .contact .txt br:nth-child(3) {
+  display: none;
+}
+@media (max-width: 480px) {
+  .contact .txt br:nth-child(1), .contact .txt br:nth-child(3) {
+    display: inline;
+  }
+}
+
+/* FOOTER */
+#footer {
+  background-color: #312c29;
+  padding: 2% 0%;
+}
+#footer p, #footer span {
+  color: #fff;
+}
+#footer .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100vw;
+  align-items: center;
+}
+#footer .flex li {
+  width: 33%;
+}
+@media (max-width: 480px) {
+  #footer .flex li {
+    width: 50%;
+    margin: 0vh auto;
+  }
+}
+#footer .flex li img {
+  width: 15vw;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  #footer .flex li img {
+    width: 40vw;
+    height: auto;
+    object-fit: contain;
+  }
+}
+#footer .flex li.sns-btn {
+  /* インスタボタン */
+}
+#footer .flex li.sns-btn a {
+  /* snsボタン共通 */
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+  border: solid 1px #fff;
+  color: #fff;
+  margin: 3vh 0vw 2vh 0.5vw;
+  /* 各アイコン、写真を真ん中に */
+}
+#footer .flex li.sns-btn a i, #footer .flex li.sns-btn a img {
+  /* アイコンを真ん中に */
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#footer .flex li.sns-btn a.sns-insta:hover {
+  /* sns hoverした時のカラー変化 */
+  border: solid 1px #1DA1F2;
+  background: #1DA1F2;
+  color: #fff;
+}
+#footer .flex li.sns-btn a.sns-pinterest:hover {
+  /* sns hoverした時のカラー変化 */
+  border: solid 1px #e60023;
+  background: #e60023;
+  color: #fff;
+}
+#footer .flex li.sns-btn a.sns-wantedly:hover {
+  /* sns hoverした時のカラー変化 */
+  border: solid 1px #20BDDA;
+  background: #20BDDA;
+  color: #fff;
+}
+@media (max-width: 480px) {
+  #footer .flex li.sns-btn p {
+    display: none;
+  }
+}
+#footer .copy-right {
+  font-size: 0.8rem;
+  margin: 5vh auto 2vh;
+}
+@media (max-width: 480px) {
+  #footer .copy-right {
+    margin: 2vh auto;
+  }
+}

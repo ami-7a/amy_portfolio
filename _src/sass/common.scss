@@ -1,0 +1,295 @@
+@charset "UTF-8";
+@import "mixin";
+
+/* ヘッダー、ハンバーガーメニュー、フッターの共通CSS */
+
+html{
+  width: 100vw;
+  height: auto;
+}
+
+body{
+  height: auto;
+  background-color: $background-color;
+  color: $font-color;
+  font-size: 0.95rem;
+  font-family: 'Cormorant Garamond','Shippori Mincho B1', 'Waterfall',serif;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: .12vw;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+  color: $font-color;
+  display: inline-block;
+}
+
+img{
+  max-width: 100%;
+}
+
+li{
+  list-style:none;
+}
+
+main{
+  /* headerの分だけ下げる */
+  padding-top: 15vh;
+
+  @include sp{
+    padding-top: 9vh;
+  }
+}
+
+/* トップページとコンタクトページ */
+#main{
+  height: auto;
+  /* header＋#mainの分下げる */
+  padding-top: 23vh;
+
+  @include sp{
+    padding-top: 15vh;
+  }
+}
+
+/* 全てのコンテントの上12vh下10vh開ける*/
+.main-content{
+  padding: 12vh 0vw 10vh;
+
+  @include sp{
+    padding: 9vh 0vw;
+  }
+}
+
+/* 下からふっわっと表示 */
+.fade-up {
+  opacity : 0;
+  transform : translate(0, 45px);
+  transition : all 700ms;
+  transition-delay: .5s;
+}
+  
+.effect-scroll {
+  opacity : 1;
+  transform : translate(0, 0);
+}
+/*** 下からふっわっと表示ここまで ***/
+
+// 手書き文字
+.handwritting{
+  font-family: 'Waterfall';
+  font-size: 3rem;
+
+  @include sp{
+    font-size: 2.5rem;
+  }
+}
+
+// h1共通
+h1{
+  font-size: 2.5rem;
+  font-weight: normal;
+
+  @include sp{
+    font-size: 2rem;
+  }
+}
+
+/* 英語の小見出し */
+h2{
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 1vh;
+
+  @include sp{
+    font-size: 1.5rem;
+  }
+}
+
+/* 日本語の小見出し */
+h3{
+  font-size: 1.5rem;
+  margin-bottom: 2vh;
+}
+
+// txt共通
+.txt{
+  line-height: 5vh;
+}
+
+/* 縦文字*/
+.v-txt{
+  writing-mode: vertical-lr;
+  float: right;
+  padding-top: 20vh;
+  padding-right: 1vw;
+
+  @include sp{
+    padding-top: 5vh;
+    letter-spacing: 5px;
+  }
+}
+
+#header{
+	height: 13vh;
+  position: fixed;
+  background-color: $background-color;
+	width:100%;
+  z-index: 100;
+
+  @include sp{
+    height: 9vh;
+  }
+
+  .top-logo{
+    img{
+      @include img(13vw,13vh);
+      margin: .5vh auto;
+
+      @include sp{
+        @include img(auto,7vh);
+        margin: 1vh auto;
+      }
+    }
+  }
+}
+
+/* linkボタン共通 */
+
+.btn{
+
+  a{
+    @include btn;
+
+    @include sp{
+      padding: 1.5vh 7vw;
+      max-width: 100vw;
+    }
+
+    &:hover{
+      @include btn-hover;
+    }
+
+    .fa-chevron-right{
+      @include arrow($arrow-color);
+    }
+
+  }
+
+}
+
+/* CONTACT */
+.contact{
+  background-color: lighten($pink, 5%);
+
+  img{
+    @include img(20vw, 20vh);
+    margin: 2vh auto;
+
+    @include sp{
+      @include img(40vw, auto);
+      margin: 1vh auto;
+    }
+  }
+
+  .txt{
+
+    @include sp{
+        width: 90vw;
+        margin: 0 auto;
+      }
+    
+    br{
+      &:nth-child(1), &:nth-child(3){
+        display: none;
+
+        @include sp{
+          display: inline;
+        }
+      }
+    }
+  }
+
+  
+}
+
+/* FOOTER */
+#footer{
+  p,span{
+    color: #fff;
+  }
+  
+  background-color: darken($brown, 50%);
+  padding: 2% 0%;
+
+  .flex{
+    @include flex(100vw);
+    align-items: center;
+
+    li{
+      width: 33%;
+
+      @include sp{
+        width: 50%;
+        margin: 0vh auto;
+      }
+
+      img{
+        @include img(15vw,auto);
+
+        @include sp{
+          @include img(40vw,auto);
+        }
+      }
+    }
+
+    li.sns-btn{
+      /* インスタボタン */
+      
+      a{
+        @include sns-btn(#fff);
+        
+        /* 各アイコン、写真を真ん中に */
+        i,img{
+          @include sns-i;
+        }
+      }
+
+      a.sns-insta{
+        &:hover{
+          @include sns-hover($twitter-blue);
+        }
+      }
+
+      a.sns-pinterest{
+        &:hover{
+          @include sns-hover($pinterest-red);
+        }
+      }
+
+      a.sns-wantedly{
+        &:hover{
+          @include sns-hover($wantedly-blue);
+        }
+      }
+
+      p{
+        @include sp{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .copy-right{
+    font-size: .8rem;
+    margin: 5vh auto 2vh;
+
+    @include sp{
+      margin: 2vh auto;
+    }
+  }
+}
+

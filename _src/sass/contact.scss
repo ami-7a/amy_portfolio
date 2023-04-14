@@ -1,0 +1,96 @@
+@import "mixin";
+
+.contact{
+  background-color: lighten($pink, 5%);
+  border-radius: 700px 700px 0 0 ;
+
+  .contact-img{
+    margin: 10vh auto;
+
+      img{
+      @include img(auto, 35vh);
+
+      @include sp{
+        @include img(auto, 30vh);
+      }
+    }
+  }
+  
+}
+
+.form{
+  width: 65vw;
+  height: 70vh;
+  text-align: left;
+  margin: 5vh auto;
+
+
+
+  /* テキスト */
+  li{
+    width: 50%;
+    margin-left: 18vw;
+
+    @include sp{
+      width: 100%;
+      margin-left: -6vw;
+    }
+
+    /* インプット3つ共通 */
+    input{
+      width: 30vw;
+      border-bottom: 1px solid $font-color;
+      margin: 2vh auto;
+
+      @include sp{
+        width: 80vw;
+      }
+    }
+
+    /* テキストエリア */
+    textarea{
+      width: 30vw;
+      border-bottom: 1px solid $font-color;
+      padding-top: 1vw;
+
+      @include sp{
+        width: 80vw;
+      }
+    }
+
+    .txt-area p{
+      margin-top: 2vh;
+    }
+  }
+
+}
+
+
+// 送信ボタン
+.sent-btn{
+  background-color: #b0848b;
+  color: #fffefd;
+  text-align: center;
+  border-radius: 25px;
+  padding: 2%;
+  width: 10vw;
+  margin: 3vh 0vw 0vh 10vw;
+  cursor: pointer;
+
+  @include sp{
+    padding: 4%;
+    width: 20vw;
+    margin: 3vh 0vw 3vh 28vw;
+  }
+
+  &:hover{
+    background-color: #9d5b66;
+    transition: .5s;
+  }
+}
+
+/* オート入力した時の背景色調整 */
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px $pink inset;
+}
+

@@ -1,0 +1,376 @@
+@charset "UTF-8";
+/* SNSボタン色 */
+/* flex共通 */
+/* image共通 */
+/* ボタン共通 */
+/* フェードインアニメーション */
+.fadeIn {
+  background: rgb(32, 32, 32);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 900;
+}
+.fadeIn p {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+  width: 20vw;
+}
+@media (max-width: 480px) {
+  .fadeIn p {
+    width: 70vw;
+  }
+}
+.fadeIn p img {
+  width: 40vw;
+  height: 45vh;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .fadeIn p img {
+    width: 60vw;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* GREETING */
+.greeting {
+  background-color: #DCD2CA;
+  border-radius: 700px 700px 0 0;
+}
+.greeting .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 80vw;
+}
+@media (max-width: 480px) {
+  .greeting .flex {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+.greeting .flex li {
+  width: 50%;
+}
+@media (max-width: 480px) {
+  .greeting .flex li {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.greeting .flex li img {
+  width: auto;
+  height: 70vh;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .greeting .flex li img {
+    width: auto;
+    height: 35vh;
+    object-fit: contain;
+  }
+}
+.greeting .flex .txt {
+  padding-top: 15vh;
+}
+@media (max-width: 480px) {
+  .greeting .flex .txt {
+    padding-top: 0vh;
+  }
+}
+.greeting .flex .txt br:nth-child(1) {
+  display: none;
+}
+@media (max-width: 480px) {
+  .greeting .flex .txt br:nth-child(1) {
+    display: inline;
+  }
+  .greeting .flex .txt br:nth-child(4) {
+    display: none;
+  }
+  .greeting .flex .txt br:nth-child(6) {
+    display: none;
+  }
+}
+.greeting .flex .txt h1 {
+  margin-bottom: 5vh;
+}
+@media (max-width: 480px) {
+  .greeting .flex .txt h1 {
+    margin-bottom: 2vh;
+  }
+}
+.greeting .flex .txt .handwritting {
+  margin-top: 2vh;
+}
+
+/* 中心のライン画像 */
+.line img {
+  width: 15vw;
+  height: 15vh;
+  object-fit: contain;
+  margin-bottom: 3vh;
+}
+@media (max-width: 480px) {
+  .line img {
+    width: 25vw;
+    height: 25vh;
+    object-fit: contain;
+    margin-bottom: 0vh;
+  }
+}
+
+/* SERVICE , SKILLS */
+.service, .skills {
+  background-color: #b4aba5;
+}
+
+/* SERVICE */
+.service .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 95vw;
+}
+@media (max-width: 480px) {
+  .service .flex {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+.service .flex li {
+  width: 33%;
+}
+@media (max-width: 480px) {
+  .service .flex li {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+.service .flex li img {
+  width: 65vw;
+  height: 65vh;
+  object-fit: contain;
+  object-fit: cover;
+}
+@media (max-width: 480px) {
+  .service .flex li img {
+    width: 90vw;
+    height: auto;
+    object-fit: contain;
+  }
+}
+@media (max-width: 480px) {
+  .service .flex li:nth-of-type(1) {
+    margin-top: -20vh;
+  }
+}
+.service .flex li:nth-of-type(2) {
+  padding-top: 6vh;
+}
+@media (max-width: 480px) {
+  .service .flex li:nth-of-type(2) {
+    padding-top: 2vh;
+  }
+}
+.service .flex li:nth-of-type(3) {
+  padding-top: 12vh;
+}
+@media (max-width: 480px) {
+  .service .flex li:nth-of-type(3) {
+    padding-top: 2vh;
+  }
+}
+
+/* SKILL */
+.skills .skills-content {
+  width: 80vw;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 3vh; /* ラインと文字の間 */
+  margin: 0vh auto; /* 中央寄せ */
+  color: #fff;
+}
+.skills .skills-content .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 70vw;
+}
+@media (max-width: 480px) {
+  .skills .skills-content .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 80vw;
+  }
+}
+.skills .skills-content .flex li {
+  width: 30%;
+  padding: 4vh;
+}
+@media (max-width: 480px) {
+  .skills .skills-content .flex li {
+    width: 50%;
+    padding: 3vh 7vw 3vh 0vw;
+  }
+}
+.skills .skills-content .flex li img {
+  width: auto;
+  height: 10vh;
+  object-fit: contain;
+  margin-bottom: 2vh;
+}
+@media (max-width: 480px) {
+  .skills .skills-content .flex li img {
+    margin-bottom: 1vh;
+  }
+}
+.skills .skills-content .flex li p {
+  font-size: 1.1rem;
+}
+@media (max-width: 480px) {
+  .skills .skills-content .flex li p {
+    font-size: 1rem;
+  }
+}
+
+/* WORKS */
+.works {
+  /* WEB DESIGN */
+  /* BUSINESS CARD */
+  /* LOGO DESIGN */
+}
+.works .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 70vw;
+}
+@media (max-width: 480px) {
+  .works .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 85vw;
+  }
+}
+.works .web-site li {
+  width: 50%;
+  padding-left: 3%;
+}
+@media (max-width: 480px) {
+  .works .web-site li {
+    width: 100%;
+    padding-left: 7%;
+    margin: 0 auto;
+  }
+}
+.works .web-site li a img {
+  width: 50vw;
+  height: 60vh;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .works .web-site li a img {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+  }
+}
+.works .web-site li a p {
+  width: 45%;
+  border-top: 0.2px solid #b4aba5;
+  border-bottom: 0.2px solid #b4aba5;
+  padding: 3% 0%;
+  float: right;
+}
+@media (max-width: 480px) {
+  .works .web-site li a p {
+    width: 70%;
+    margin-right: 11%;
+    margin-bottom: 5vh;
+  }
+}
+.works .bc .bc-h2 {
+  /* paddingを上げる */
+  padding-top: 5vh;
+}
+@media (max-width: 480px) {
+  .works .bc .bc-h2 {
+    padding-top: 1vh;
+  }
+}
+.works .bc li {
+  width: 33%;
+  padding-left: 5%;
+}
+@media (max-width: 480px) {
+  .works .bc li {
+    width: 100vw;
+  }
+}
+.works .bc li img {
+  width: 35vw;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 0 10px #c7c7c7;
+  margin-bottom: 1vh;
+}
+@media (max-width: 480px) {
+  .works .bc li img {
+    width: 35vw;
+    height: auto;
+    object-fit: contain;
+    margin-left: 1vw;
+  }
+}
+.works .logo .logo-h2 {
+  /* paddingを上げる */
+  padding-top: 0vh;
+}
+.works .logo li {
+  width: 16%;
+  padding-left: 5%;
+}
+@media (max-width: 480px) {
+  .works .logo li {
+    width: 33%;
+  }
+}
+@media (max-width: 480px) {
+  .works .logo li:nth-child(3), .works .logo li:nth-child(6) {
+    padding-top: 5vh;
+  }
+}
+.works .logo li img {
+  width: 23vw;
+  height: 23vh;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .works .logo li img {
+    width: 30vw;
+    height: auto;
+    object-fit: contain;
+  }
+}
+@media (max-width: 480px) {
+  .works .logo {
+    margin-top: -5vh;
+  }
+}

@@ -1,0 +1,353 @@
+@import "mixin";
+
+/* フェードインアニメーション */
+.fadeIn {
+	background: rgb(32, 32, 32);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 900;
+
+  p {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999;
+    width: 20vw;
+
+    @include sp{
+      width: 70vw
+    }
+
+    img{
+      @include img(40vw,45vh);
+
+      @include sp{
+        @include img(60vw,auto);
+      }
+    }
+  }
+
+}
+
+/* GREETING */
+.greeting{
+  background-color: $pink;
+  border-radius: 700px 700px 0 0 ;
+
+  .flex{
+    @include flex(80vw);
+
+    @include sp{
+      flex-direction: column;
+      width: 100vw;
+    }
+
+    li{
+      width: 50%;
+
+      @include sp{
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      img{
+        @include img(auto, 70vh);
+      
+        @include sp{
+          @include img(auto, 35vh);
+        }
+      }
+    }
+
+    .txt{
+      padding-top: 15vh;
+
+      @include sp{
+        padding-top: 0vh;
+      }
+
+      br{
+        &:nth-child(1){
+          display: none;
+        }
+
+
+        @include sp{
+          &:nth-child(1){
+            display: inline;
+          }
+
+          &:nth-child(4){
+            display: none;
+          }
+
+          &:nth-child(6){
+            display: none;
+          }
+        }
+        
+          
+     
+        
+      }
+
+      h1{
+        margin-bottom: 5vh;
+
+        @include sp{
+          margin-bottom: 2vh;
+        }
+      }
+
+      .handwritting{
+        margin-top: 2vh;
+      }
+    }
+  }
+}
+
+/* 中心のライン画像 */
+.line{
+  img{
+    @include img(15vw, 15vh);
+    margin-bottom: 3vh;
+
+    @include sp{
+      @include img(25vw, 25vh);
+      margin-bottom: 0vh;
+    }
+  }
+}
+
+/* SERVICE , SKILLS */
+.service,.skills{
+  background-color: $brown;
+}
+
+/* SERVICE */
+.service{
+
+  .flex{
+    @include flex(95vw);
+
+    @include sp{
+      flex-direction: column;
+      width: 100vw;
+    }
+
+    li{
+      width: 33%;
+
+      @include sp{
+        width: 90vw;
+        margin: 0 auto;
+      }
+  
+      img{
+        @include img(65vw, 65vh);
+        object-fit: cover;
+
+        @include sp{
+          @include img(90vw, auto);
+        }
+      }
+
+      //  上に引き上げ
+      &:nth-of-type(1){
+        @include sp{
+        margin-top: -20vh;
+        }
+      }
+
+      &:nth-of-type(2){
+        padding-top: 6vh;
+
+        @include sp{
+          padding-top: 2vh;
+        }
+      }
+
+      &:nth-of-type(3){
+        padding-top: 12vh;
+
+        @include sp{
+          padding-top: 2vh;
+        }
+      }
+    }
+  }
+}
+
+/* SKILL */
+.skills{
+
+  .skills-content{
+    width: 80vw;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 3vh; /* ラインと文字の間 */
+    margin: 0vh auto; /* 中央寄せ */
+    color: #fff;
+
+    .flex{
+      @include flex(70vw);
+
+      @include sp{
+        @include flex(80vw);
+      }
+      
+      li{
+        width: 30%;
+        padding: 4vh;
+
+        @include sp{
+          width: 50%;
+          padding: 3vh 7vw 3vh 0vw;
+        }
+  
+        img{
+          @include img(auto, 10vh);
+          margin-bottom: 2vh;
+
+          @include sp{
+            margin-bottom: 1vh;
+          }
+        }
+
+        p{
+          font-size: 1.1rem;
+
+          @include sp{
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* WORKS */
+.works{
+  
+  .flex{
+    @include flex(70vw);
+
+    @include sp{
+      @include flex(85vw);
+    }
+  }
+
+  /* WEB DESIGN */
+  .web-site{
+    li{
+      width: 50%;
+      padding-left: 3%;
+
+      @include sp{
+        width: 100%;
+        padding-left: 7%;
+        margin: 0 auto;
+      }
+
+      a{
+        img{
+          @include img(50vw, 60vh);
+
+          @include sp{
+            @include img(100vw, auto);
+          }
+        }
+
+        p{
+          width: 45%;
+          border-top: .2px solid $brown;
+          border-bottom: .2px solid $brown;
+          padding: 3% 0%;
+          float: right;
+
+          @include sp{
+            width: 70%;
+            margin-right: 11%;
+            margin-bottom: 5vh;
+          }
+        }
+      }
+    }
+  }
+
+  /* BUSINESS CARD */
+  .bc{
+  
+    .bc-h2{
+      /* paddingを上げる */
+      padding-top: 5vh;
+
+      @include sp{
+        padding-top: 1vh;
+      }
+    }
+  
+    li{
+      width: 33%;
+      padding-left: 5%;
+
+      @include sp{
+        width: 100vw;
+      }
+
+  
+      img{
+        @include img(35vw, auto);
+        box-shadow: 0 0 10px #c7c7c7;
+        margin-bottom: 1vh;
+
+        @include sp{
+          @include img(35vw, auto);
+          margin-left: 1vw;
+        }
+      }
+    }
+  }
+  
+  /* LOGO DESIGN */
+  .logo{
+  
+    .logo-h2{
+      /* paddingを上げる */
+      padding-top: 0vh;
+    }
+
+    li{
+      width: 16%;
+      padding-left: 5%;
+
+      @include sp{
+        width: 33%;
+      }
+
+      &:nth-child(3),
+      &:nth-child(6){
+        @include sp{
+          padding-top: 5vh;
+        }
+      }
+
+      img{
+        @include img(23vw, 23vh);
+
+        @include sp{
+          @include img(30vw, auto);
+        }
+      }
+    }
+
+    @include sp{
+      margin-top: -5vh;
+    }
+  }
+}

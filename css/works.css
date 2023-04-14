@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* SNSボタン色 */
+/* flex共通 */
+/* image共通 */
+/* ボタン共通 */
+.works {
+  /* BUSINESS CARD */
+}
+.works .work {
+  width: 51vw;
+  margin: 5vh auto 20vh;
+}
+@media (max-width: 480px) {
+  .works .work {
+    width: 90vw;
+    margin: 5vh auto 15vh;
+  }
+}
+.works .work .scroll-img {
+  height: 60vh;
+  overflow: scroll;
+}
+.works .work .txt {
+  text-align: left;
+  margin: 5vh auto;
+  /* 各会社名 */
+}
+.works .work .txt .company {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.works .bc {
+  width: 70vw;
+}
+@media (max-width: 480px) {
+  .works .bc {
+    width: 90vw;
+  }
+}
+.works .bc .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 70vw;
+}
+@media (max-width: 480px) {
+  .works .bc .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90vw;
+  }
+}
+.works .bc .flex li {
+  width: 33%;
+  padding: 0% 1%;
+}
+.works .bc .flex li img {
+  width: 33vw;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 0 10px #c7c7c7;
+  margin-bottom: 2vh;
+}
+.works .bc .txt {
+  width: 51vw;
+}
+@media (max-width: 480px) {
+  .works .bc .txt {
+    width: 85vw;
+  }
+}

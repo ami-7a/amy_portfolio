@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* SNSボタン色 */
+/* flex共通 */
+/* image共通 */
+/* ボタン共通 */
+.contact {
+  background-color: #e6dfd9;
+  border-radius: 700px 700px 0 0;
+}
+.contact .contact-img {
+  margin: 10vh auto;
+}
+.contact .contact-img img {
+  width: auto;
+  height: 35vh;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .contact .contact-img img {
+    width: auto;
+    height: 30vh;
+    object-fit: contain;
+  }
+}
+
+.form {
+  width: 65vw;
+  height: 70vh;
+  text-align: left;
+  margin: 5vh auto;
+  /* テキスト */
+}
+.form li {
+  width: 50%;
+  margin-left: 18vw;
+  /* インプット3つ共通 */
+  /* テキストエリア */
+}
+@media (max-width: 480px) {
+  .form li {
+    width: 100%;
+    margin-left: -6vw;
+  }
+}
+.form li input {
+  width: 30vw;
+  border-bottom: 1px solid #534636;
+  margin: 2vh auto;
+}
+@media (max-width: 480px) {
+  .form li input {
+    width: 80vw;
+  }
+}
+.form li textarea {
+  width: 30vw;
+  border-bottom: 1px solid #534636;
+  padding-top: 1vw;
+}
+@media (max-width: 480px) {
+  .form li textarea {
+    width: 80vw;
+  }
+}
+.form li .txt-area p {
+  margin-top: 2vh;
+}
+
+.sent-btn {
+  background-color: #b0848b;
+  color: #fffefd;
+  text-align: center;
+  border-radius: 25px;
+  padding: 2%;
+  width: 10vw;
+  margin: 3vh 0vw 0vh 10vw;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .sent-btn {
+    padding: 4%;
+    width: 20vw;
+    margin: 3vh 0vw 3vh 28vw;
+  }
+}
+.sent-btn:hover {
+  background-color: #9d5b66;
+  transition: 0.5s;
+}
+
+/* オート入力した時の背景色調整 */
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #DCD2CA inset;
+}

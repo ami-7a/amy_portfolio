@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/* SNSボタン色 */
+/* flex共通 */
+/* image共通 */
+/* ボタン共通 */
+/* ハンバーガーメニュー */
+#hamburger {
+  position: fixed;
+  right: 4vw;
+  top: 2vh;
+  z-index: 100; /*ハンバーガーを一番上に表示 */
+}
+@media (max-width: 480px) {
+  #hamburger {
+    right: 10vw;
+    top: 0.5vh;
+  }
+}
+
+/* 三本線の調整 */
+.open-line {
+  position: relative;
+  cursor: pointer;
+  z-index: 100;
+  height: 10vh;
+  width: 6vw; /*クリック範囲 */
+}
+.open-line span {
+  position: absolute;
+  height: 1px;
+  background: #534636;
+  /* 開く前三本ラインの調整 */
+}
+.open-line span:nth-of-type(1) {
+  top: 2vh;
+  width: 4vw;
+}
+@media (max-width: 480px) {
+  .open-line span:nth-of-type(1) {
+    width: 10vw;
+  }
+}
+.open-line span:nth-of-type(2) {
+  top: 3.8vh;
+  width: 3vw;
+}
+@media (max-width: 480px) {
+  .open-line span:nth-of-type(2) {
+    width: 8vw;
+  }
+}
+.open-line span:nth-of-type(3) {
+  top: 5.6vh;
+  width: 2vw;
+}
+@media (max-width: 480px) {
+  .open-line span:nth-of-type(3) {
+    width: 6vw;
+  }
+}
+
+/* ラインが開く、閉じる速度 */
+.open-line, .open-line span {
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+/* 開いたあと三本ラインの調整 */
+.open-line.open span:nth-of-type(1) {
+  width: 1.4vw;
+  transform: translate3d(2px, 5px, 0) rotate(45deg);
+}
+@media (max-width: 480px) {
+  .open-line.open span:nth-of-type(1) {
+    width: 3vw;
+    transform: translate3d(2px, 8px, 0) rotate(45deg);
+  }
+}
+.open-line.open span:nth-of-type(2) {
+  transform: translate3d(0px, 0, 0) rotate(-45deg);
+}
+.open-line.open span:nth-of-type(3) {
+  width: 1.3vw;
+  transform: translate3d(20px, -5px, 0) rotate(45deg);
+}
+@media (max-width: 480px) {
+  .open-line.open span:nth-of-type(3) {
+    width: 3vw;
+    transform: translate3d(17px, -8px, 0) rotate(45deg);
+  }
+}
+
+/*開いた時のnav中身*/
+#nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fffcf2;
+  font-size: 1.1rem;
+  transition: all 0.6s;
+}
+@media (max-width: 480px) {
+  #nav {
+    font-size: 1.2rem;
+  }
+}
+#nav img {
+  width: 16vw;
+  height: 11vh;
+  object-fit: contain;
+  margin: 17vh auto 10vh;
+}
+@media (max-width: 480px) {
+  #nav img {
+    width: 60vw;
+    height: auto;
+    object-fit: contain;
+    margin: 10vh auto;
+  }
+}
+#nav ul li {
+  margin-bottom: 7vh;
+}
+
+/* 開いた時 */
+#nav.open {
+  right: 0px;
+}
+
+/* ハンバーガー内コンタクトボタン */
+.nav-contact-btn {
+  margin-bottom: 5vh;
+}
+.nav-contact-btn a {
+  margin: 2vh auto 5vh;
+  padding: 1.5vh 2vw;
+  max-width: 20vw;
+  background-color: #fffcf2;
+  transition: 0.3s;
+  box-shadow: 5px 5px 10px #c7c4b6;
+  line-height: 5vh;
+}
+@media (max-width: 480px) {
+  .nav-contact-btn a {
+    margin: 2vh auto 4vh;
+    padding: 1.5vh 10vw;
+    max-width: 100vw;
+  }
+}
+.nav-contact-btn a:hover {
+  text-decoration: none;
+  background-color: #dfdbcc;
+  box-shadow: 5px 5px 10px #918e85;
+}
+.nav-contact-btn a .fa-chevron-right {
+  padding-left: 2vw;
+  color: #c196ba;
+}

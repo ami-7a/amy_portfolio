@@ -1,0 +1,153 @@
+@import "mixin";
+
+.intro{
+  background-color: $pink;
+
+  .flex{
+    @include flex(100vw);
+    align-items: center;
+    padding: 7% 5% 6.5% 10%;
+
+    @include sp{
+      flex-direction: column-reverse;
+      padding: 9vh 2vw;
+    }
+  
+    li{
+  
+      // 文字の方
+      &:nth-child(1){
+        width: 40%;
+
+        @include sp{
+          width: 90vw;
+          margin-top: 5vh
+        }
+
+        h2{
+          margin-bottom: 2vh;
+        }
+      }
+  
+      // スウェーデン写真の方
+      &:nth-child(2){
+        width: 60%;
+
+        @include sp{
+          width: 90vw;
+        }
+
+        img{
+          @include img(auto, 60vh);
+          box-shadow: 0 0 10px rgb(146, 141, 141);
+
+          @include sp{
+            @include img(75vw,auto);
+          }
+        }
+      }
+    }
+  }
+
+  .text{
+    background-color: $pink;
+    font-size: 1.5rem;
+    letter-spacing: 1.2vw;
+
+    @include sp{
+      font-size: 1rem;
+      padding-top: 5vh;
+    }
+  }
+}
+
+
+.profile{
+  @include flex(90vw);
+  align-items: center;
+
+  @include sp{
+    flex-direction: column;
+    width: 100vw;
+  }
+  
+  li.img{
+      width: 45%;
+
+      @include sp{
+        width: 100vw;
+      }
+
+      img{
+        @include img(auto, 55vh);
+
+        @include sp{
+          @include img(70vw, auto);
+        }
+      }
+    }
+
+  li.txt{
+    width: 55%;
+    padding: 4%;
+
+    @include sp{
+      width: 90vw;
+      margin: 0 auto;
+      // 長いテキスト（使用可能スキル）を折り返す
+      word-break : break-all;
+    }
+  }
+
+  // デザイナー経験のdirectionを逆に
+  &:nth-of-type(2){
+    @include sp{
+      flex-direction: column-reverse;
+    }
+    
+  }
+
+  &:nth-of-type(3){
+    li.txt{
+      @include sp{
+        br{
+          &:nth-child(1),
+          &:nth-child(3){
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.others{
+  @include flex(90vw);
+  margin-bottom: 10vh;
+
+  @include sp{
+    flex-direction: column;
+  }
+
+  li{
+      width: 33%;
+      padding: 0vh 3%;
+
+      @include sp{
+        width: 90vw;
+        margin: 5vh auto;
+      }
+
+      img{
+        @include img(auto, 22vh);
+        border-radius: 50%;
+        box-shadow: 10px 10px 10px #b3aaa4;
+      }
+    }
+
+}
+
+
+
