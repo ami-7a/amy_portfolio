@@ -374,3 +374,9 @@
     margin-top: -5vh;
   }
 }
+
+.btn.stop a {
+  margin: 5vh auto 0vh;
+  max-width: 96vw;
+  pointer-events: none;
+}

@@ -149,11 +149,11 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
          </ul>
  
          <!-- ハンバーガー内コンタクトボタン -->
-         <div class="nav-contact-btn">
+         <!-- <div class="nav-contact-btn">
            <a href="contact.php" target="_blank" rel="noopener noreferrer">
              <span>CONTACT<i class="fas fa-chevron-right fa-xs"></i></span>
            </a>
-         </div>
+         </div> -->
        </nav>
    
      </div>

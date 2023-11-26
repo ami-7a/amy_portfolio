@@ -351,3 +351,12 @@
     }
   }
 }
+
+// 活動休止ボタン
+.btn.stop{
+  a{
+    margin: 5vh auto 0vh;
+    max-width: 96vw;
+    pointer-events: none;
+  }
+}
